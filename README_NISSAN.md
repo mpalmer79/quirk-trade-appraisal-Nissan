@@ -1,5 +1,5 @@
 
-# Quirk Nissan Trade Appraisal (Clone of Quirk Ford)
+# Quirk Nissan Trade Appraisal 
 
 This is a direct clone of the Quirk Ford trade tool, with branding and links adjusted to **Quirk Nissan**.
 
