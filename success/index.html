@@ -5,18 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title data-i18n="successTitle">Thanks! - Quirk Nissan</title>
   <link rel="stylesheet" href="/assets/styles.css" />
+
+  <style>
+    /* Desktop/tablet: center the card and keep the lot bright */
+    body.success {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;          /* vertical centering */
+      justify-content: center;      /* horizontal centering */
+      padding: 40px 16px;           /* breathing room on large screens */
+      background:
+        /* light overlay so the lot image shows through */
+        linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)),
+        url('/assets/quirk-lot.png') center / cover no-repeat fixed;
+    }
+
+    /* The white “library card” */
+    main.success-card {
+      max-width: 720px;
+      width: 100%;
+      background: rgba(255,255,255,0.50);   /* opacity .50 */
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Mobile-only: move the card close to the top, keep .50 opacity */
+    @media (max-width: 640px) {
+      body.success {
+        align-items: flex-start;   /* push card toward the top */
+        padding-top: 12px;         /* tiny gap from the very top */
+      }
+      main.success-card {
+        margin: 8px auto 0;        /* ensure a sliver of space above */
+      }
+    }
+  </style>
 </head>
-<body
-  style="
-    min-height:100vh;
-    /* Lighter overlay so the lot image shows through more */
-    background:
-      linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)),
-      url('/assets/quirk-lot.png') center / cover no-repeat fixed;
-  "
->
-  <main style="max-width:720px;margin:40px auto;background:#fff;padding:24px;
-               border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1)">
+<body class="success">
+  <main class="success-card">
     <h1 style="text-align:center;margin:0 0 10px;color:#004a2f" data-i18n="successHeading">
       Thank you!
     </h1>
